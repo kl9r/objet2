@@ -1,7 +1,7 @@
 <?php
 
 // avec abstract on interdit d'instancier un autre "Personnage"
-abstract class personnage
+abstract class personnage implements Combat
 {
     protected $nom;
     protected $vie = 100;
@@ -9,6 +9,11 @@ abstract class personnage
     protected $taille;
     protected $masse;
     protected $race;
+
+    public function resultatCombat($a, $b)
+    {
+        return "$a a vaincu $b";
+    }
 
     public function marcher() : string
     {
@@ -19,9 +24,5 @@ abstract class personnage
     {
         return $this->vie;
     }
-
-
-
-
 
 }

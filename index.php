@@ -8,6 +8,8 @@ spl_autoload_register('classAutoLoader');
 
 $merlin = new Magicien("Macron");
 
+$merlin->unnomdemethodealacon();
+
 Logs::logWrite("coucou");
 
 var_dump($merlin);
