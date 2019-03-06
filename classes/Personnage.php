@@ -1,13 +1,14 @@
 <?php
 
-class personnage
+// avec abstract on interdit d'instancier un autre "Personnage"
+abstract class personnage
 {
-    public $nom;
-    public $vie = 100;
-    public $attaque;
-    public $taille;
-    public $masse;
-    public $race;
+    protected $nom;
+    protected $vie = 100;
+    protected $attaque;
+    protected $taille;
+    protected $masse;
+    protected $race;
 
     public function marcher() : string
     {

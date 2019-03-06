@@ -1,11 +1,13 @@
 <?php
 
+// pour les sites internationaux
+date_default_timezone_set('Europe/Paris');
+
 require_once "./fonctions/classAutoLoader.php";
 spl_autoload_register('classAutoLoader');
 
-$michel = new Personnage();
-echo $michel->marcher();
-// var_dump($michel);
+$merlin = new Magicien("Macron");
 
-$merlin = new Magicien();
+Logs::logWrite("coucou");
+
 var_dump($merlin);
